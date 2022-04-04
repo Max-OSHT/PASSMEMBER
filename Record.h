@@ -30,8 +30,8 @@ public:
     int newFiles(string &keyWord,int &twice);
     int readFiles(string &keyWord, int &twice);
     int writeFiles(string &keyWord,int &twice);
-    int preview();
-    int previewCrypto();
+    void preview();
+    void previewCrypto();
     int recordFiles();
 };
 

@@ -23,7 +23,7 @@ string Record::modeMenu(string &newWord, string &keyWord, int &twice) {
     else if (twice == 2) {
         keywordVigener(alfavit, alfavitMini, newWord, encodeWord, keyWord, symbol, alf, symb); // ПРИ ИСПОЛЬЗОВАНИИ В ПАРОЛЯХ И ЛОГИНАХ РЕКОМЕНДУЕТСЯ ЗАДАВАТЬ КЛЮЧЕВЫЕ СЛОВА С УЧЕТОМ РАЗЛИЧНЫХ СИВОЛОВ И ЗНАКОВ
     } else {
-        cerr << "Sorry bro you are entesr don`t right value" << endl;
+        cerr << "Sorry bro you are enter don`t right value" << endl;
         exit(0);
     }
     return encodeWord;

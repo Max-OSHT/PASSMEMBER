@@ -18,7 +18,7 @@ string Record::decryptManager(string &encodeWord, string &keyWord, int &twice){
     else if (twice == 2){
         decryptVigenerKey(alfavit, alfavitMini, encodeWord, keyWord, symbol, WantWord, alf, symb);
     }else {
-        cerr << "Sorry bro you are entesr don`t right value" << endl;
+        cerr << "Sorry bro you are enter don`t right value" << endl;
         exit(0);
     }
     return WantWord;
@@ -49,8 +49,8 @@ int decryptClassic(string &alfavit, string &alfavitMini, string &encodeWord, str
             break;
         }
     }
-    for (int q = 0; q < symb; q++){
-       if (flag == true){
+    if (flag == true){
+        for (int q = 0; q < symb; q++){
             if (symbol[(q + count) % symb] == encodeWord[j]){
                 WantWord += symbol[(q - count + k + symb) % symb];
                 break;
@@ -104,8 +104,8 @@ int decryptVigenerAfavit(string &alfavit, string &alfavitMini, string &encodeWor
     }
     if (check == true) // обнуление счетчика, если в верхнем цикле не выполнилось ни одного условия
         count = 0;
-    for (int i = 0; i < symb; i++){
-        if (check == true){
+    if (check == true){
+        for (int i = 0; i < symb; i++){
             if (symbol[i % symb] == keyWord[q])
                 break;
             count++;
@@ -136,8 +136,8 @@ int decryptVigenerAfavitMini(string &alfavit, string &alfavitMini, string &encod
     }
     if (check == true) // обнуление счетчика, если в верхнем цикле не выполнилось ни одного условия
         count = 0;
-    for (int i = 0; i < symb; i++){
-        if (check == true){
+    if (check == true){
+        for (int i = 0; i < symb; i++){
             if (symbol[i % symb] == keyWord[q])
                 break;
             count++;
@@ -168,8 +168,8 @@ int decryptVigenerSymbol(string &alfavit, string &alfavitMini, string &encodeWor
     }
     if (check == true) // обнуление счетчика, если в верхнем цикле не выполнилось ни одного условия
         count = 0;
-    for (int i = 0; i < symb; i++){
-        if (check == true){
+    if (check == true){
+        for (int i = 0; i < symb; i++){
             if (symbol[i % symb] == keyWord[q])
                 break;
             count++;
